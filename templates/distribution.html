@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Размещение по каютам</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Размещение по каютам</h1>
+<div class="astronauts-list">
+    {% for astronaut in astronauts %}
+    <div class="astronaut">
+        {{ astronaut }} - Каюта № {{ loop.index }} {% if loop.first %}- капитан корабля{% endif %}
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
